@@ -1,0 +1,8 @@
+.header {
+
+    @apply p-2 px-10 bg-[#1e1450] text-white;
+}
+
+.main {
+    @apply p-4 ;
+}

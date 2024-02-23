@@ -1,0 +1,7 @@
+.skeleton {
+    @apply relative h-[200px] w-[100px] bg-slate-50 rounded-md overflow-hidden;
+}
+
+.skeleton::before {
+    @apply absolute content-[''] h-full w-full bg-slate-300 bg-gradient-to-r from-slate-50 to-slate-100 -translate-x-full animate-loading;
+}

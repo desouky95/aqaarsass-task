@@ -1,0 +1,8 @@
+.card {
+    @apply rounded-lg shadow-md hover:shadow-xl transition-all cursor-pointer min-h-6 w-fit lg:min-w-60 p-3;
+}
+
+
+.title {
+    @apply font-bold my-4 block;
+}

@@ -1,0 +1,3 @@
+.btn {
+    @apply rounded-md min-w-6 h-fit p-2 outline outline-2 hover:opacity-90 active:border-black;
+}

@@ -1,0 +1,4 @@
+.breadcrumb {
+    @apply inline-flex items-center;
+
+}

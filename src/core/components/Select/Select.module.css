@@ -1,0 +1,16 @@
+.trigger {
+    @apply rounded-md p-2 border border-valhalla-950 flex items-center gap-2 lg:min-w-[120px] justify-end w-full;
+}
+
+.trigger[data-state='open'] .icon {
+    @apply rotate-180 transition-all;
+}
+
+.content {
+    @apply bg-inherit shadow-md rounded-md py-4 h-fit min-w-[15rem];
+}
+
+
+.content div[role='option'] {
+    @apply px-4 hover:bg-slate-100 cursor-pointer py-1;
+}
