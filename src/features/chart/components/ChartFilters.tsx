@@ -28,7 +28,8 @@ export const ChartFilters = () => {
     },
     {
       state: params.get("state") ?? "",
-      "start-date": params.get("start-date") ?? "",
+      "start-date": params.get("start-date") ?? "2022-01-01",
+      
     }
   );
 

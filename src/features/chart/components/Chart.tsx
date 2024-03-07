@@ -40,9 +40,11 @@ export const options: Pick<ComponentProps<typeof Bar>, "options"> = {
     scales: {
       x: {
         stacked: true,
-        ticks: {},
       },
       y: {
+        // beginAtZero: true,
+        // max: 100,
+        // min: 0,
         stacked: true,
         ticks: {
           callback(tickValue, index, ticks) {
@@ -70,9 +72,8 @@ type ChartProps = {
 export const Chart = ({}: ChartProps) => {
   const { data, isLoading, isError } = useGetStat({});
 
-  const chart_data = useMemo(() => {
-    if (isLoading || isError) return {};
-  }, [JSON.stringify(data)]);
+  data?.forEach(d => console.log(d.data.value_of_deals))
+
   if (isError)
     return (
       <div className="p-6">
@@ -96,14 +97,14 @@ export const Chart = ({}: ChartProps) => {
 
           datasets: [
             {
-              label: "Number of Deals",
-              backgroundColor: "#31238c",
-              data: data?.map((_) => _.data.number_of_deals),
+              label: "سكني",
+              backgroundColor: "#2984C9",
+              data: data?.map((_) => _.data.value_of_deals.skini_counter),
             },
             {
-              label: "Value of Deals",
-              backgroundColor: "#31238c",
-              data: data?.map((_) => _.data.value_of_deals),
+              label: "تجاري",
+              backgroundColor: "#F8B358",
+              data: data?.map((_) => _.data.value_of_deals.tijari_counter),
             },
           ],
         }}
